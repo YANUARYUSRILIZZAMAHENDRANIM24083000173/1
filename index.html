@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panduan Pemasangan Komponen Komputer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f7fa;
+        }
+        
+        .step-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .component-highlight {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 5, 5, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+            }
+        }
+        
+        .tooltip {
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .tooltip-container:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen">
+        <!-- Header Section -->
+        <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-8 px-4">
+            <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="mb-6 md:mb-0">
+                        <h1 class="text-3xl md:text-4xl font-bold">Panduan Pemasangan Komputer</h1>
+                        <p class="mt-2 text-blue-100">Step-by-step lengkap untuk merakit PC Anda</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container mx-auto px-4 py-8">
+            <!-- Component Overview -->
+            <section class="mb-12">
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-6">Komponen Utama</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="component-highlight bg-gray-50 p-4 rounded-lg border border-blue-200">
+                            <div class="flex items-center mb-3">
+                                <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                    <img src="https://www.geekom.co.uk/wp-content/uploads/2025/02/What-Is-a-Core-in-a-CPU.jpg" alt="CPU processor mini icon" />
+                                </div>
+                                <h3 class="font-medium text-gray-800">Processor (CPU)</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Otak komputer yang melakukan pemrosesan data</p>
+                        </div>
+                        
+                        <div class="component-highlight bg-gray-50 p-4 rounded-lg border border-blue-200">
+                            <div class="flex items-center mb-3">
+                                <div class="bg-purple-100 p-2 rounded-full mr-3">
+                                    <img src="https://tkj.smkdarmasiswasidoarjo.sch.id/wp-content/uploads/2023/10/B120213-cover.jpg" alt="RAM memory mini icon" />
+                                </div>
+                                <h3 class="font-medium text-gray-800">RAM</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Memori sementara untuk menyimpan data yang sedang diproses</p>
+                        </div>
+                        
+                        <div class="component-highlight bg-gray-50 p-4 rounded-lg border border-blue-200">
+                            <div class="flex items-center mb-3">
+                                <div class="bg-red-100 p-2 rounded-full mr-3">
+                                    <img src="https://static1.xdaimages.com/wordpress/wp-content/uploads/wm/2024/01/msi-gpus-8.jpg" alt="GPU graphics card mini icon" />
+                                </div>
+                                <h3 class="font-medium text-gray-800">GPU</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Memproses dan menampilkan grafis pada layar</p>
+                        </div>
+                        
+                        <div class="component-highlight bg-gray-50 p-4 rounded-lg border border-blue-200">
+                            <div class="flex items-center mb-3">
+                                <div class="bg-green-100 p-2 rounded-full mr-3">
+                                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/be91728b-b216-4b20-86f1-96b5171bb0ec.png" alt="Motherboard mini icon" />
+                                </div>
+                                <h3 class="font-medium text-gray-800">Motherboard</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Papan utama tempat semua komponen terhubung</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Installation Steps -->
+            <section>
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6">Langkah-Langkah Pemasangan</h2>
+                
+                <div class="space-y-6">
+                    <!-- Step 1 -->
+                    <div class="step-card bg-white rounded-xl p-6 shadow-md">
+                        <div class="flex items-start">
+                            <div class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                                1
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Persiapan Motherboard</h3>
+                                <div class="flex flex-col md:flex-row gap-6 mt-4">
+                                    <div class="md:w-1/2">
+                                        <div class="bg-gray-100 rounded-lg p-4 mb-4">
+                                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ac59cb59-cfa8-4002-adce-8eae2df86d09.png" alt="Motherboard baru dalam antistatic bag dengan CPU socket terlihat jelas" />
+                                        </div>
+                                    </div>
+                                    <div class="md:w-1/2">
+                                        <div class="bg-blue-50 rounded-lg p-4 mb-4">
+                                            <h4 class="font-medium text-blue-800 mb-2">Yang Perlu Dilakukan:</h4>
+                                            <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                                                <li>Siapkan motherboard pada permukaan yang bersih dan rata</li>
+                                                <li>Pastikan Anda memiliki manual motherboard</li>
+                                                <li>Siapkan sekrup dan standoff untuk casing</li>
+                                            </ul>
+                                        </div>
+                                        <div class="bg-yellow-50 rounded-lg p-4">
+                                            <h4 class="font-medium text-yellow-800 mb-2">Perhatian!</h4>
+                                            <p class="text-gray-700">Sentuh grounding (logam) casing sebelum memegang motherboard untuk menghindari ESD.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="step-card bg-white rounded-xl p-6 shadow-md">
+                        <div class="flex items-start">
+                            <div class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                                2
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Pemasangan CPU</h3>
+                                <div class="flex flex-col md:flex-row gap-6 mt-4">
+                                    <div class="md:w-1/2">
+                                        <div class="relative tooltip-container">
+                                            <div class="bg-gray-100 rounded-lg p-4 mb-4">
+                                                <img src="https://computory.com/wp-content/uploads/2019/02/tray-cpu-intel.jpg" alt="CPU Intel atau AMD sedang dipasang ke socket motherboard dengan pin golden terlihat" />
+                                            </div>
+                                            <div class="tooltip absolute bottom-4 left-4 bg-gray-800 text-white p-2 rounded text-sm">
+                                                Perhatikan tanda segitiga pada CPU dan socket untuk penyesuaian
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="md:w-1/2">
+                                        <div class="bg-blue-50 rounded-lg p-4 mb-4">
+                                            <h4 class="font-medium text-blue-800 mb-2">Prosedur:</h4>
+                                            <ol class="list-decimal pl-5 text-gray-700 space-y-2">
+                                                <li>Buka tuas pengunci socket CPU</li>
+                                                <li>Letakkan CPU dengan hati-hati sesuai tanda orientasi</li>
+                                                <li>Tutup kembali tuas pengunci dengan lembut</li>
+                                                <li>Oleskan thermal paste jika perlu</li>
+                                            </ol>
+                                        </div>
+                                        <div class="flex justify-between">
+                                            <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition">
+                                                Lihat Video
+                                            </button>
+                                            <button class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-md text-sm font-medium transition">
+                                                Simpan Catatan
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="step-card bg-white rounded-xl p-6 shadow-md">
+                        <div class="flex items-start">
+                            <div class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                                3
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-semibold text-gray-800 mb-2">Pemasangan RAM</h3>
+                                <div class="flex flex-col md:flex-row gap-6 mt-4">
+                                    <div class="md:w-1/2">
+                                        <div class="bg-gray-100 rounded-lg p-4 mb-4">
+                                            <img src="https://soaltekno.lokercepat.id/wp-content/uploads/2022/06/mobo1-1-2.jpg" alt="Modul RAM DDR4 sedang dipasang ke slot DIMM motherboard dengan slot warna berbeda" />
+                                        </div>
+                                    </div>
+                                    <div class="md:w-1/2">
+                                        <div class="bg-blue-50 rounded-lg p-4 mb-4">
+                                            <h4 class="font-medium text-blue-800 mb-2">Petunjuk:</h4>
+                                            <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                                                <li>Buka pengunci di kedua ujung slot RAM</li>
+                                                <li>Sesuaikan takik pada RAM dengan slot motherboard</li>
+                                                <li>Tekan dengan merata hingga pengunci menutup sendiri</li>
+                                                <li>Untuk dual channel, gunakan slot dengan warna sama</li>
+                                            </ul>
+                                        </div>
+                                        <div class="relative">
+                                            <label class="flex items-center">
+                                                <input type="checkbox" class="rounded text-blue-600 mr-2">
+                                                <span class="text-gray-700">Saya sudah memasang RAM dengan benar</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4-8 (collapsible) -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                        <details class="group">
+                            <summary class="list-none cursor-pointer p-6 flex justify-between items-center">
+                                <span class="text-xl font-semibold text-gray-800">Lihat Langkah Selanjutnya (4-8)</span>
+                                <svg class="w-6 h-6 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </summary>
+                            <div class="px-6 pb-6 pt-0 space-y-6">
+                                <!-- Step 4 -->
+                                <div class="border-t pt-6">
+                                    <div class="flex items-start">
+                                        <div class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                                            4
+                                        </div>
+                                        <div class="flex-1">
+                                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Pemasangan GPU</h3>
+                                            <div class="flex flex-col md:flex-row gap-6 mt-4">
+                                                <div class="md:w-1/2">
+                                                    <div class="bg-gray-100 rounded-lg p-4">
+                                                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7a97c329-f6fd-4986-8451-123fb062f2da.png" alt="Graphics card NVIDIA RTX sedang dipasang ke slot PCIe x16 dengan kunci terlihat" />
+                                                    </div>
+                                                </div>
+                                                <div class="md:w-1/2">
+                                                    <p class="text-gray-700">Pasang GPU ke slot PCIe x16, pastikan pengunci slot terbuka sebelum memasang. Sekrup bracket GPU ke casing untuk stabilitas.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Step 5 -->
+                                <div class="border-t pt-6">
+                                    <div class="flex items-start">
+                                        <div class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                                            5
+                                        </div>
+                                        <div class="flex-1">
+                                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Kabel Power</h3>
+                                            <div class="flex flex-col md:flex-row gap-6 mt-4">
+                                                <div class="md:w-1/2">
+                                                    <div class="bg-gray-100 rounded-lg p-4">
+                                                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ec1eb329-0f03-4d63-9954-81cbf3a93e0c.png" alt="Kabel power motherboard 24-pin dan CPU 8-pin sedang terhubung dengan warna matching" />
+                                                    </div>
+                                                </div>
+                                                <div class="md:w-1/2">
+                                                    <p class="text-gray-700">Hubungkan kabel power dari PSU ke motherboard (24-pin ATX dan 8-pin CPU), GPU, dan komponen lain yang membutuhkan daya.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Step 6 -->
+                                <div class="border-t pt-6">
+                                    <div class="flex items-start">
+                                        <div class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                                            6
+                                        </div>
+                                        <div class="flex-1">
+                                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Pemasangan Storage</h3>
+                                            <div class="flex flex-col md:flex-row gap-6 mt-4">
+                                                <div class="md:w-1/2">
+                                                    <div class="bg-gray-100 rounded-lg p-4">
+                                                        <img src="https://media.istockphoto.com/id/1060606438/id/foto/hard-disk-ssd-m2-pada-latar-belakang-motherboard.jpg?s=170667a&w=0&k=20&c=M9fc5BK-M60sqOdK6ePeJlxocbEWaoGOulWyViM6Y6A=" alt="SSD M.2 dipasang pada slot motherboard atau SATA SSD dipasang di drive bay" />
+                                                    </div>
+                                                </div>
+                                                <div class="md:w-1/2">
+                                                    <div class="bg-blue-50 rounded-lg p-4 mb-4">
+                                                        <h4 class="font-medium text-blue-800 mb-2">Prosedur:</h4>
+                                                        <ol class="list-decimal pl-5 text-gray-700 space-y-2">
+                                                            <li>Untuk M.2 SSD: Pasang dengan sudut 30° ke slot M.2 lalu tekan dan kencangkan sekrup</li>
+                                                            <li>Untuk SATA SSD/HDD: Pasang di drive bay dan hubungkan kabel SATA dan power</li>
+                                                            <li>Pastikan koneksi yang rapat dan kuat</li>
+                                                        </ol>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Step 7 -->
+                                <div class="border-t pt-6">
+                                    <div class="flex items-start">
+                                        <div class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                                            7
+                                        </div>
+                                        <div class="flex-1">
+                                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Manajemen Kabel</h3>
+                                            <div class="flex flex-col md:flex-row gap-6 mt-4">
+                                                <div class="md:w-1/2">
+                                                    <div class="bg-gray-100 rounded-lg p-4">
+                                                        <img src="https://i.ytimg.com/vi/3M8OWrDSwik/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBfRUV0aFK0jFmbVjwvL0BkpNN8Kw" alt="Tampilan dalam casing dengan kabel-kabel yang tertata rapi menggunakan cable tie" />
+                                                    </div>
+                                                </div>
+                                                <div class="md:w-1/2">
+                                                    <div class="bg-blue-50 rounded-lg p-4">
+                                                        <h4 class="font-medium text-blue-800 mb-2">Tips:</h4>
+                                                        <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                                                            <li>Gunakan cable tie untuk mengikat kabel yang berdekatan</li>
+                                                            <li>Manfaatkan rongga belakang motherboard tray untuk menyembunyikan kabel</li>
+                                                            <li>Pastikan kabel tidak menghalangi airflow casing</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Step 8 -->
+                                <div class="border-t pt-6">
+                                    <div class="flex items-start">
+                                        <div class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                                            8
+                                        </div>
+                                        <div class="flex-1">
+                                            <h3 class="text-lg font-semibold text-gray-800 mb-2">First Boot & BIOS Setup</h3>
+                                            <div class="flex flex-col md:flex-row gap-6 mt-4">
+                                                <div class="md:w-1/2">
+                                                    <div class="bg-gray-100 rounded-lg p-4">
+                                                        <img src="https://cdn.mos.cms.futurecdn.net/KTCH6SWLcikTqJJtfVR9Va-1200-80.png" alt="Tampilan BIOS pertama kali dengan informasi hardware yang terdeteksi" />
+                                                    </div>
+                                                </div>
+                                                <div class="md:w-1/2">
+                                                    <div class="bg-blue-50 rounded-lg p-4 mb-4">
+                                                        <h4 class="font-medium text-blue-800 mb-2">Langkah:</h4>
+                                                        <ol class="list-decimal pl-5 text-gray-700 space-y-2">
+                                                            <li>Hubungkan kabel power dan nyalakan PC</li>
+                                                            <li>Masuk BIOS dengan menekan tombol DEL/F2 saat boot</li>
+                                                            <li>Verifikasi semua komponen terdeteksi</li>
+                                                            <li>Atur boot priority jika perlu install OS</li>
+                                                            <li>Simpan perubahan dan exit</li>
+                                                        </ol>
+                                                    </div>
+                                                    <div class="bg-yellow-50 rounded-lg p-4">
+                                                        <h4 class="font-medium text-yellow-800 mb-2">Troubleshooting:</h4>
+                                                        <p class="text-gray-700">Jika PC tidak menyala, periksa kembali koneksi power dan pemasangan RAM/GPU</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Tools Section -->
+        <section class="bg-gray-50 py-12 px-4">
+            <div class="container mx-auto">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-8 text-center">Tools yang Dibutuhkan</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                        <div class="bg-blue-50 p-3 rounded-full inline-block mb-3">
+                            <img src="https://image.made-in-china.com/202f0j00evbWiSPIHTpD/110-in-1-Screwdriver-Set-Mini-Electric-Precision-Screwdriver-Multi-Computer-PC-Mobile-Phone-Device-Repair-Hand-Home-Tools-Screwdriver-Tool.webp" alt="Phillips screwdriver icon with cross-head" />
+                        </div>
+                        <h3 class="font-medium text-gray-800">Obeng</h3>
+                        <p class="text-gray-600 text-sm mt-1">Untuk sekrup casing dan komponen</p>
+                    </div>
+                    
+                    <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                        <div class="bg-yellow-50 p-3 rounded-full inline-block mb-3">
+                            <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//107/MTA-23888681/brd-03409_kabel-ties-3-6mm-cable-ties-20cm-hitam-meval_full01.jpg" alt="Zip ties icon for cable management" />
+                        </div>
+                        <h3 class="font-medium text-gray-800">Tali Pengikat</h3>
+                        <p class="text-gray-600 text-sm mt-1">Manajemen kabel</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                        <div class="bg-red-50 p-3 rounded-full inline-block mb-3">
+                            <img src="https://img.lazcdn.com/g/p/618eecdcfec4ab7881e5b8d1f67d2629.jpg_720x720q80.jpg" alt="Flashlight icon for illumination" />
+                        </div>
+                        <h3 class="font-medium text-gray-800">Senter</h3>
+                        <p class="text-gray-600 text-sm mt-1">Pencahayaan area kerja</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white py-8 px-4">
+            <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-4 md:mb-0">
+                        <h3 class="text-xl font-bold mb-2">Panduan Pemasangan Komputer</h3>
+                        <p class="text-gray-400 text-sm">Panduan lengkap untuk pemula dan profesional.</p>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <button class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md font-medium transition">
+                            Download PDF Guide
+                        </button>
+                        <button class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-md font-medium transition">
+                            Simpan Progres
+                        </button>
+                    </div>
+                </div>
+                <div class="border-t border-gray-700 mt-8 pt-4">
+                    <p class="text-gray-400 text-sm text-center">© 2025 Panduan Pemasangan Komputer. Seluruh hak cipta dilindungi.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Tooltip functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tooltipContainers = document.querySelectorAll('.tooltip-container');
+            
+            tooltipContainers.forEach(container => {
+                const tooltip = container.querySelector('.tooltip');
+                
+                container.addEventListener('mouseenter', function() {
+                    tooltip.style.visibility = 'visible';
+                    tooltip.style.opacity = '1';
+                });
+                
+                container.addEventListener('mouseleave', function() {
+                    tooltip.style.visibility = 'hidden';
+                    tooltip.style.opacity = '0';
+                });
+            });
+            
+            // Progress tracking
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    if (this.checked) {
+                        const stepCard = this.closest('.step-card');
+                        if (stepCard) {
+                            stepCard.style.borderLeft = '4px solid #10B981';
+                        }
+                    } else {
+                        const stepCard = this.closest('.step-card');
+                        if (stepCard) {
+                            stepCard.style.borderLeft = 'none';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
